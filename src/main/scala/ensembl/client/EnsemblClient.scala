@@ -14,15 +14,17 @@ class EnsemblClient extends EnsemblArchive
   with EnsemblCrossReference
   with EnsemblQTL
   with EnsemblInformation
+  with EnsemblLinkageDisequilibrium
   with EnsemblLookup
   with EnsemblMapping
   with EnsemblOntologies
   with EnsemblOverlap
   with EnsemblPhenotype
-  with EnsemblSequence
   with EnsemblRegulation
-  with EnsemblVariation
+  with EnsemblSequence
+  with EnsemblHaplotypes
   with EnsemblVEP
+  with EnsemblVariation
   with EnsemblGA4GH
 
 /**
