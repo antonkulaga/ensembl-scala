@@ -722,7 +722,7 @@ trait EnsemblLookup {
     * https://rest.ensembl.org/documentation/info/symbol_lookup
     * TODO: optional parameters expand, format
     */
-  def getLookupSymbolJSON(species: String, symbol: String, expand: Boolean = null, format: String = ""): Value = {
+  def getLookupSymbolJSON(species: String, symbol: String, expand: Boolean = false, format: String = ""): Value = {
     ujson.read(
       requests.get(
         s"https://rest.ensembl.org/lookup/symbol/${species}/${symbol}",
@@ -844,8 +844,8 @@ trait EnsemblOntologies {
     * https://rest.ensembl.org/documentation/info/ontology_descendants
     * TODO: optional parameters closest_term, ontology, subset, zero_distance
     */
-  def getOntologyDescendantsJSON(id: String, closest_term: Boolean = null, ontology: String = "", subset: String = "",
-                                 zero_distance: Boolean = null): Value = {
+  def getOntologyDescendantsJSON(id: String, closest_term: Boolean = false, ontology: String = "", subset: String = "",
+                                 zero_distance: Boolean = false): Value = {
     ujson.read(
       requests.get(
         s"https://rest.ensembl.org/ontology/descendants/${id}",

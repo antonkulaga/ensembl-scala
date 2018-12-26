@@ -1,5 +1,7 @@
 import ensembl.client._
 
+val EnsemblClient = new EnsemblClient()
+
 // Archive
 val testArchive = EnsemblClient.getArchiveJSON("ENSG00000157764")
 
@@ -73,9 +75,9 @@ val testOntologyAncestors = EnsemblClient.getOntologyAncestorsJSON("GO:0005667")
 val testOntologyAncestorsChart = EnsemblClient.getOntologyAncestorsChartJSON("GO:0005667")
 val testOntologyDescendants = EnsemblClient.getOntologyDescendantsJSON("GO:0005667")
 val testOntologyId = EnsemblClient.getOntologyIdJSON("GO:0005667")
-val testOntologyName = EnsemblClient.getOntologyNameJSON("transcription factor complex")
-val testTaxonomyClassificatio = EnsemblClient.getTaxonomyClassificationJSON("Homo sapiens")
-val testTaxonomyId = EnsemblClient.getTaxonomyIdJSON("Homo sapiens")
+//val testOntologyName = EnsemblClient.getOntologyNameJSON("transcription factor complex")
+//val testTaxonomyClassification = EnsemblClient.getTaxonomyClassificationJSON("Homo sapiens")
+//val testTaxonomyId = EnsemblClient.getTaxonomyIdJSON("Homo sapiens")
 val testTaxonomy = EnsemblClient.getTaxonomyNameJSON("Homo%25")
 
 // Overlap
@@ -87,7 +89,7 @@ val testOverlapTranslation = EnsemblClient.getOverlapTranslationJSON("ENSP000002
 val testPhenotypeAccession = EnsemblClient.getPhenotypeAccessionJSON("homo_sapiens", "EFO:0003900")
 val testPhenotypeGene = EnsemblClient.getPhenotypeGeneJSON("homo_sapiens", "ENSG00000157764")
 val testPhenotypeRegion = EnsemblClient.getPhenotypeRegionJSON("homo_sapiens", "9:22125500-22136000:1")
-val testPhenotypeTerm = EnsemblClient.getPhenotypeTermJSON("homo_sapiens", "coffee consumption")
+//val testPhenotypeTerm = EnsemblClient.getPhenotypeTermJSON("homo_sapiens", "coffee consumption")
 
 // Regulation
 val testRegulatoryMicroarray = EnsemblClient.getRegulatoryMicroarrayJSON("homo_sapiens", "HumanWG_6_V2", "ILMN_1763508")
@@ -108,7 +110,7 @@ val testHaplotypes = EnsemblClient.getHaplotypesJSON("homo_sapiens", "ENST000002
 // VEP
 val testVepHgvs = EnsemblClient.getVepHgvsJSON("homo_sapiens", "AGT:c.803T>C")
 val testVepId = EnsemblClient.getVepIdJSON("homo_sapiens", "rs56116432")
-val testVepRegion = EnsemblClient.getVepRegionJSON("homo_sapiens", "9:22125503-22125502:1", " C")
+//val testVepRegion = EnsemblClient.getVepRegionJSON("homo_sapiens", "9:22125503-22125502:1", " C")
 
 // Variation
 val testVariantRecoder = EnsemblClient.getVariantRecoderJSON("homo_sapiens", "rs56116432")
@@ -126,7 +128,5 @@ val testGa4ghFeatureSets = EnsemblClient.getGa4ghFeatureSetsJSON("Ensembl")
 val testGa4ghVariants = EnsemblClient.getGa4ghVariantsJSON("1:rs1333049")
 val testGa4ghVariantSets = EnsemblClient.getGa4ghVariantSetsJSON("1")
 val testGa4ghReferences = EnsemblClient.getGa4ghReferencesJSON("9489ae7581e14efcad134f02afafe26c")
-
-// TODO: What should be the test value in getGa4ghReferenceSetsJSON?
-val testGa4ghReferenceSets = EnsemblClient.getGa4ghReferenceSetsJSON("-")
+val testGa4ghReferenceSets = EnsemblClient.getGa4ghReferenceSetsJSON("GRCh38")
 val testGa4ghVariantAnnotationSets = EnsemblClient.getGa4ghVariantAnnotationSetsJSON("Ensembl")
