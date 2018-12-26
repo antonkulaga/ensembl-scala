@@ -645,7 +645,6 @@ trait EnsemblInformation {
 /**
   * Linkage Disequilibrium
   */
-// TODO: problem - method of this trait are not recognize in the test file
 trait EnsemblLinkageDisequilibrium {
 
   /**
