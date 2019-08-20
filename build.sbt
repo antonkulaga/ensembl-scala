@@ -17,6 +17,7 @@ resolvers += Resolver.bintrayRepo("comp-bio-aging", "main")
 libraryDependencies ++= Seq(
  "com.lihaoyi" %% "requests" % "0.2.0",
  "com.lihaoyi" %% "upickle" % "0.7.5",
+ "com.lihaoyi" %% "pprint" % "0.5.5",
  "org.scalatest" %% "scalatest" % "3.0.8" % Test
 )
 

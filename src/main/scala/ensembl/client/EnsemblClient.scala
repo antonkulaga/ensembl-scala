@@ -1,8 +1,9 @@
 package ensembl.client
 
+import ensembl.client.EnsemblResults.HomologyResults
 import requests.Response
 import ujson.Value.Value
-
+import upickle.default._
 case object EnsemblClient extends EnsemblClient
 
 /**
@@ -229,6 +230,13 @@ trait EnsemblComparative {
         params = Map("content-type" -> "application/json")
       ).text
     )
+  }
+
+  def getHomology(id: String, aligned: Boolean = true, cigar_line: Boolean = true, compara: String = "",
+                  format: String = "", sequence: String = "", target_species: String = "", target_taxon: Int = 0,
+                  type_homology: String = ""): EnsemblResults.HomologyResults = {
+    val v = getHomologyJSON(id, aligned, cigar_line, compara, format, sequence, target_species, target_taxon, type_homology)("data")(0)
+    read[EnsemblResults.HomologyResults](v)
   }
 
   /**
