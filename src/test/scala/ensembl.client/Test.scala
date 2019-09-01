@@ -2,7 +2,7 @@ package ensembl.client
 
 object Test extends scala.App {
   import ensembl.client._
-  //import pprint
+  import pprint._
   import upickle.default._
 
   val EnsemblClient = new EnsemblClient()

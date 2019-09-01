@@ -1,7 +1,5 @@
 package ensembl.client
 
-import ensembl.client.EnsemblResults.HomologyResults
-import requests.Response
 import ujson.Value.Value
 import upickle.default._
 case object EnsemblClient extends EnsemblClient

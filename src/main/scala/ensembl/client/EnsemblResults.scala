@@ -3,8 +3,8 @@ package ensembl.client
 import ujson.Value
 import upickle.default._
 import upickle.default.{macroRW, ReadWriter => RW}
-
-import scala.collection.MapView
+import scala.collection.compat._
+import scala.collection._
 /*
 case class Ortholog(
                    `type`: String,
